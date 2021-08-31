@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Stream</title>
+	<style>
+		#myVideo{
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<video src="" id="myVideo" controls>
+			No contenet to play
+		</video>
+		<hr>
+		<button id="startVideo">Start Video</button>
+	</div>
+	<script type="text/javascript">
+		
+		const video = document.getElementById('myVideo');
+
+		function startUp() {
+		
+			navigator.mediaDevices.getUserMedia({
+				audio: true,
+				video: true
+			}).then(stream => {
+				video.srcObject = stream;
+			}).catch(console.error)
+		}
+
+		window.addEventListener('load',startUp,false);
+	</script>
+</body>
+</html>
