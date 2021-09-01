@@ -1,0 +1,33 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+ul{
+	
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 0.5em;
+
+}
+
+ul li{
+	border: 1px solid gold;
+	text-align: center;
+	/*padding: 15px;*/
+}
+
+ul li a:link{
+	display: inline-block;
+	text-decoration: none;
+	width: 100%;
+	padding: 15px;
+}
+
+a:active{
+	background-color: green;
+}

@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
+
+body {
+  background: #F0F0EB;
+  height: 100vh;
+}
+
+#upper-container {
+  width: 100%;
+  height: 48%;
+  /*position: relative;*/
+  display: flex;
+  align-items: flex-end;
+}
+
+.upper-wave{
+  width: 20%;
+  border: 2px solid #81EEED;
+  /*position: absolute;*/
+  border-radius: 50%;
+  height: 50%;
+  display: inline-block;
+}
+
+#divider {
+  width: 100%;
+  height: 2%;
+  background: #FFD3D3;
+}
+
+#lower-container {
+  height: 48%;
+  width: 100%;
+}
+/*# sourceMappingURL=waves.css.map */

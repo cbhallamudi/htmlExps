@@ -1,0 +1,21 @@
+$primary-bg : #F0F0EB;
+$divider-bg : #FFD3D3;
+
+body{
+    background: $primary-bg;
+    height: 100vh;
+}
+
+#upper-container{
+	width: 100%;
+    height:48%;		
+}
+#divider{
+    width: 100%;
+    height:2%;
+    background: $divider-bg;
+}
+#lower-container{
+    height: 48%;
+    width: 100%;
+}

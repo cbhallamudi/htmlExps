@@ -1,0 +1,86 @@
+*{
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+}
+
+*::selection{
+	background-color: #E8C4C4;
+	color: #68804C;
+}
+
+@keyframes highlight-span{
+	0%{color: black; text-shadow: none;}
+	50%{color: red; text-shadow: 10px 0px #6BEB4D;}
+	100%{color: black; text-shadow: none;}
+}
+@keyframes description-background{
+	from{background-position: 0% 100%;},
+	to{background-position: 0% 0%;}
+}
+
+@keyframes normal-text-animation{
+	from{background-size: 0% 0%;width: 50%},
+	to{background-size: 100% 100%;width: 100%;}	
+}
+
+@keyframes normal-text-width{
+	from{},
+	to{}
+}
+
+.container{
+	text-align: center;
+}
+
+#text-container-p{
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+
+.span-animation-class{
+	animation-name: "highlight-span";
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+#description-container-p{
+	text-transform: uppercase;
+	animation-name: "description-background";
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	display: inline-block;
+	font-size: 3rem;
+	color: transparent;
+	background-image: linear-gradient(to right bottom, #6BEB4D, #f30);
+	background-clip: text;
+	background-size: 30% 30%;
+	background-position: 50% 50%;
+	/*background-repeat: repeat;*/
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
+
+#normal-text-p{
+	width: 100%;
+	text-align: justify;
+	text-align-last: center;
+	padding: 10px;
+	font-size: 2rem;
+	/*background-color: black;*/
+	background-image: linear-gradient(to right bottom, #555050, #3e3a3a);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: transparent;
+	background-clip: text;
+	/*animation-name: "normal-text-animation";	
+	animation-duration: 2s; 
+	animation-timing-function: linear; 
+	animation-fill-mode: forwards;*/
+	/*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+	animation: normal-text-animation 1s linear forwards, normal-text-width 4s linear 5s forwards;
+
+}

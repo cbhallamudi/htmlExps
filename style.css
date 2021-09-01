@@ -1,0 +1,25 @@
+.main_div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100px 200px 50px;
+}
+.main_div1{
+	display: table;
+	table-layout: auto;
+}
+
+.sub_div{
+	overflow: auto;
+}
+.sub_div:nth-child(odd){
+	background-color: red;
+}
+.sub_div:nth-child(even){
+	background-color: green;
+}
+.sub_div:nth-child(3){
+	background-color: blue;
+}
+.sub_div:nth-child(4){
+	background-color: yellow;
+}

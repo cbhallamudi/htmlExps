@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border:  none;
+	box-sizing: border-box;
+}
+
+
+#first-circle{
+	stroke: #F01111;
+	stroke-width: 2;
+	fill: #E254EF;
+}
+
+#second-circle{
+	stroke: yellowgreen;
+	stroke-width: 2;
+	fill: mediumslateblue;
+	fill-opacity: 0.5;
+}
+
+#first-rectangle{
+	width: 60px;
+	height: 60px;
+	stroke: #0DFA05;
+	stroke-width: 2px;
+	fill: #F01111;
+
+}

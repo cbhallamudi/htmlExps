@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment Grid-template</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		#clk_menu{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button id="clk_btn">
+			Click Me!
+		</button>
+		<ul id="clk_menu">
+			<li>
+				one
+			</li>
+			<li>
+				two
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function get_menu() {
+			if(document.getElementById('clk_menu').style.display == 'block'){
+				document.getElementById('clk_menu').style.display = 'none';
+			}else{
+				document.getElementById('clk_menu').style.display = 'block';
+			}		
+		}
+		document.getElementById('clk_btn').addEventListener('click',get_menu);
+	</script>
+</body>
+</html>
