@@ -5,30 +5,27 @@ document.getElementById("encrypt").addEventListener("click",function(){
 	var pwdArray = [];
 	var randRev, finalRev = 0;
 	let randNum = Math.floor(Math.random() * (999-100) + 100);
+	let randDigit = Math.round(Math.random());
 
 	console.log(randNum);
 
 	var encyNum = function(){
 		while (randNum > 0){
 			randRev = randNum%10;
-			if(randRev == 0){
-				finalRev = finalRev * 10 + randRev.toString();
-			}else{
-				finalRev = finalRev * 10 + randRev;
-			}
-			console.log("RandRev = "+randRev+", finalRev = "+finalRev);
-			
+			finalRev = finalRev * 10 + randRev;
 			randNum = parseInt(randNum/10);
-			// console.log(randRev+"_"+randNum+"_"+finalRev);
 		}
 		return finalRev;
-		// return "Hello";
 	}();
+
+	pwdArray.push(encyNum);
 
 
 	for(var a = 0; a < normalPwd.length; a++){
-		pwdArray.push(normalPwd[a]);
+		pwdArray.push(charCodeAt(0)normalPwd[a]);
 	}
+	
+	pwdArray.push(randDigit);
 
 	var pwdString = pwdArray.join("_");
 
