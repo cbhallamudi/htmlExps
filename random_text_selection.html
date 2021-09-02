@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random Text and Selection</title>
+	<style>
+		#random-text{
+			color: #353636;
+			background-color: #757BF1;
+			height: 100px;
+			width: 75%;
+			font-size: 1.5rem;
+			padding: 5px;
+			overflow: hidden;
+			overflow-wrap: normal;
+		}
+
+		#random-text::first-letter{
+			color: red;
+			text-transform: uppercase;
+		}
+
+		/*#random-text::before{
+			content: "Random para\A\"";
+			white-space: pre;
+		}*/
+
+		#random-text::after{
+			content: "\"";
+		}
+	</style>
+</head>
+<body>
+
+	<p id="random-text">
+		
+	</p>
+
+	<script>
+		
+		var _stringArray = [];
+		
+		for(var i = 97; i <= 122; i++){
+			_stringArray.push(String.fromCharCode(i));
+		}
+
+		var _randomParaLength = Math.floor(Math.random() * 50);
+		document.getElementById("random-text").innerHTML += "Random para of length: "+_randomParaLength + "\" ";
+		for(b = 0; b < _randomParaLength; b++){
+			var _randomWordLength = Math.ceil((Math.random() * (_stringArray.length-1))/4);
+			for(a = 0; a < _randomWordLength; a++){
+				document.getElementById("random-text").innerText += _stringArray[Math.ceil(Math.random()*(_stringArray.length-1))];
+			}
+			document.getElementById("random-text").innerHTML += '&nbsp;';
+		}
+
+	</script>
+</body>
+</html>
