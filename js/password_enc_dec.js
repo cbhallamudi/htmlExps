@@ -9,6 +9,22 @@ document.getElementById("encrypt").addEventListener("click",function(){
 
 	console.log(randNum);
 
+
+
+	pwdArray.push(randDigit);
+
+
+	for(var a = 0; a < normalPwd.length; a++){
+		console.log(normalPwd.charCodeAt(a));
+
+		if(randDigit == 1){
+			pwdArray.push(parseInt(normalPwd.charCodeAt(a))+randNum);
+		}else{
+			pwdArray.push(parseInt(normalPwd.charCodeAt(a))-randNum);
+		}
+	
+	}
+
 	var encyNum = function(){
 		while (randNum > 0){
 			randRev = randNum%10;
@@ -17,15 +33,8 @@ document.getElementById("encrypt").addEventListener("click",function(){
 		}
 		return finalRev;
 	}();
-
-	pwdArray.push(encyNum);
-
-
-	for(var a = 0; a < normalPwd.length; a++){
-		pwdArray.push(charCodeAt(0)normalPwd[a]);
-	}
 	
-	pwdArray.push(randDigit);
+	pwdArray.push(encyNum);
 
 	var pwdString = pwdArray.join("_");
 
