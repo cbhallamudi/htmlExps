@@ -48,7 +48,7 @@ document.getElementById("encrypt").addEventListener("click",function(){
 
 document.getElementById("dcrypt").addEventListener("click",function() {
 	// Dcryption started ----------------------------------------------
-	var finalNormal = 0;
+	var finalNormal = 0; normalArray = [];
 	// console.log(window.pwdString);
 	decryptionStringSplit = window.pwdString.split("_");
 
@@ -62,14 +62,15 @@ document.getElementById("dcrypt").addEventListener("click",function() {
 	}();
 	console.log(finalNormal);
 
-	if(decryptionStringSplit[0] == 1){
-		for(b = 1; b < decryptionStringSplit; b++){
-			
+	for(b = 1; b < decryptionStringSplit.length; b++){
+		if(decryptionStringSplit[0] == 1){
+			normalArray.push(finalNormal-parseInt(decryptionStringSplit[b]));
+		}else{
+			normalArray.push(finalNormal+parseInt(decryptionStringSplit[b]));
 		}
-	}else{
-
 	}
 
+	console.log(normalArray.join("_"));
 
 	//Dcrytption ends --------------------------------------------------
 });
