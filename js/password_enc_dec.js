@@ -1,3 +1,5 @@
+// var pwdString;
+
 document.getElementById("encrypt").addEventListener("click",function(){
 // --------------------------------------------------------------------
 
@@ -36,16 +38,36 @@ document.getElementById("encrypt").addEventListener("click",function(){
 	
 	pwdArray.push(encyNum);
 
-	var pwdString = pwdArray.join("_");
+	window.pwdString = pwdArray.join("_");
 
 	console.log(encyNum);
 	console.log(pwdString);
 
-
-
-
-
-
-
 // ---------------------------------------------------------------------
+});
+
+document.getElementById("dcrypt").addEventListener("click",function() {
+	// Dcryption started ----------------------------------------------
+
+	// console.log(window.pwdString);
+	decryptionStringSplit = window.pwdString.split("_");
+
+	var dycNum = function(){
+		while (randNum > 0){
+			randRev = randNum%10;
+			finalRev = finalRev * 10 + randRev;
+			randNum = parseInt(randNum/10);
+		}
+		return finalRev;
+	}();
+	// console.log(decryptionStringSplit);
+
+	if(decryptionStringSplit[0] == 1){
+		
+	}else{
+
+	}
+
+
+	//Dcrytption ends --------------------------------------------------
 });
