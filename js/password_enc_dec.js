@@ -48,22 +48,24 @@ document.getElementById("encrypt").addEventListener("click",function(){
 
 document.getElementById("dcrypt").addEventListener("click",function() {
 	// Dcryption started ----------------------------------------------
-
+	var finalNormal = 0;
 	// console.log(window.pwdString);
 	decryptionStringSplit = window.pwdString.split("_");
 
 	var dycNum = function(){
-		while (randNum > 0){
-			randRev = randNum%10;
-			finalRev = finalRev * 10 + randRev;
-			randNum = parseInt(randNum/10);
+		while (decryptionStringSplit[decryptionStringSplit.length-1] > 0){
+			randNormal = decryptionStringSplit[decryptionStringSplit.length-1]%10;
+			finalNormal = finalNormal * 10 + randNormal;
+			decryptionStringSplit[decryptionStringSplit.length-1] = parseInt(decryptionStringSplit[decryptionStringSplit.length-1]/10);
 		}
-		return finalRev;
+		return finalNormal;
 	}();
-	// console.log(decryptionStringSplit);
+	console.log(finalNormal);
 
 	if(decryptionStringSplit[0] == 1){
-		
+		for(b = 1; b < decryptionStringSplit; b++){
+			
+		}
 	}else{
 
 	}
