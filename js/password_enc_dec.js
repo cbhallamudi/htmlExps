@@ -62,11 +62,11 @@ document.getElementById("dcrypt").addEventListener("click",function() {
 	}();
 	console.log(finalNormal);
 
-	for(b = 1; b < decryptionStringSplit.length; b++){
+	for(b = 1; b < (decryptionStringSplit.length-1); b++){
 		if(decryptionStringSplit[0] == 1){
-			normalArray.push(finalNormal-parseInt(decryptionStringSplit[b]));
+			normalArray.push(Math.abs(finalNormal-parseInt(decryptionStringSplit[b])));
 		}else{
-			normalArray.push(finalNormal+parseInt(decryptionStringSplit[b]));
+			normalArray.push(Math.abs(finalNormal+parseInt(decryptionStringSplit[b])));
 		}
 	}
 
